@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Xo-WS-3Eg">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--创建新的比赛-->
+        <scene sceneID="8s5-62-eAC">
+            <objects>
+                <viewController id="jkp-s5-42Q" customClass="CreateAGameViewController" customModule="MyFrisbeeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SNJ-Zu-Gjn"/>
+                        <viewControllerLayoutGuide type="bottom" id="TXn-MJ-A9l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Ay-E4-DQX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="比赛标题" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9zz-8N-g3C">
+                                <rect key="frame" x="0.0" y="72" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7Pt-QZ-acd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KQH-X3-jmu">
+                                <rect key="frame" x="47" y="122" width="320" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="地点" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsJ-NQ-fmp">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="o0b-Vz-zSo"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="时间" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="948-Qx-duy">
+                                        <rect key="frame" x="170" y="0.0" width="150" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="nPU-OY-gI9"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KuG-5d-C7Q"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploading Image" translatesAutoresizingMaskIntoConstraints="NO" id="1YF-dk-9eH">
+                                <rect key="frame" x="32" y="172" width="351" height="265"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="在这里输入比赛描述" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rcC-kU-s5s">
+                                <rect key="frame" x="32" y="457" width="351" height="156"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdX-Nz-mXf">
+                                <rect key="frame" x="0.0" y="621" width="414" height="30"/>
+                                <state key="normal" title="查看比赛参与人员并报名"/>
+                                <connections>
+                                    <segue destination="0c0-P3-q8n" kind="show" id="nUu-Ff-2UZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03v-Ss-Q32">
+                                <rect key="frame" x="80" y="172" width="259" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="uploadImageButtonTapped:" destination="jkp-s5-42Q" eventType="touchUpInside" id="pkL-KH-56V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.99784255445582504" blue="0.96294116820719267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rcC-kU-s5s" secondAttribute="trailing" constant="11" id="2GN-Ms-bS2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1YF-dk-9eH" secondAttribute="trailing" constant="11" id="2Ph-nx-eAB"/>
+                            <constraint firstItem="DdX-Nz-mXf" firstAttribute="width" secondItem="4Ay-E4-DQX" secondAttribute="width" id="2uj-XT-eb3"/>
+                            <constraint firstItem="KQH-X3-jmu" firstAttribute="top" secondItem="9zz-8N-g3C" secondAttribute="bottom" constant="10" id="3hZ-7f-bC6"/>
+                            <constraint firstItem="9zz-8N-g3C" firstAttribute="leading" secondItem="4Ay-E4-DQX" secondAttribute="leadingMargin" constant="-20" id="3sP-NS-mwk"/>
+                            <constraint firstItem="rcC-kU-s5s" firstAttribute="leading" secondItem="4Ay-E4-DQX" secondAttribute="leadingMargin" constant="12" id="Cwj-f1-2cZ"/>
+                            <constraint firstItem="KQH-X3-jmu" firstAttribute="centerX" secondItem="4Ay-E4-DQX" secondAttribute="centerX" id="DAi-0G-S93"/>
+                            <constraint firstItem="TXn-MJ-A9l" firstAttribute="top" secondItem="rcC-kU-s5s" secondAttribute="bottom" constant="123" id="JRw-ex-PYp"/>
+                            <constraint firstItem="DdX-Nz-mXf" firstAttribute="top" secondItem="rcC-kU-s5s" secondAttribute="bottom" constant="8" symbolic="YES" id="Rpc-Yh-mTg"/>
+                            <constraint firstItem="1YF-dk-9eH" firstAttribute="leading" secondItem="4Ay-E4-DQX" secondAttribute="leadingMargin" constant="12" id="TAN-QK-KWv"/>
+                            <constraint firstItem="9zz-8N-g3C" firstAttribute="width" secondItem="4Ay-E4-DQX" secondAttribute="width" id="Unb-BW-V7i"/>
+                            <constraint firstItem="1YF-dk-9eH" firstAttribute="top" secondItem="KQH-X3-jmu" secondAttribute="bottom" constant="10" id="Xao-eH-F8x"/>
+                            <constraint firstItem="DdX-Nz-mXf" firstAttribute="centerX" secondItem="4Ay-E4-DQX" secondAttribute="centerX" id="Xfm-MR-bc8"/>
+                            <constraint firstItem="TXn-MJ-A9l" firstAttribute="top" secondItem="1YF-dk-9eH" secondAttribute="bottom" constant="299" id="k7a-iG-9im"/>
+                            <constraint firstItem="1YF-dk-9eH" firstAttribute="centerX" secondItem="4Ay-E4-DQX" secondAttribute="centerX" id="ocX-3z-LCK"/>
+                            <constraint firstItem="rcC-kU-s5s" firstAttribute="top" secondItem="1YF-dk-9eH" secondAttribute="bottom" constant="20" id="ow5-U6-Hwy"/>
+                            <constraint firstItem="9zz-8N-g3C" firstAttribute="top" secondItem="SNJ-Zu-Gjn" secondAttribute="bottom" constant="8" symbolic="YES" id="pbz-T6-mvC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="创建新的比赛" id="6xW-Ca-gDW">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="toj-iH-U86">
+                            <connections>
+                                <action selector="cancelBarButtonTapped:" destination="jkp-s5-42Q" id="7bn-7e-bKk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="bXk-5B-3zW">
+                            <connections>
+                                <action selector="doneBarButtonTapped:" destination="jkp-s5-42Q" id="1Jy-7g-hf5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="rcC-kU-s5s" id="SJO-cv-TML"/>
+                        <outlet property="gameImageImageView" destination="1YF-dk-9eH" id="0lm-sG-gYZ"/>
+                        <outlet property="locationTextField" destination="dsJ-NQ-fmp" id="GKl-0F-PCD"/>
+                        <outlet property="timeTextField" destination="948-Qx-duy" id="agD-hp-v73"/>
+                        <outlet property="titleTextField" destination="9zz-8N-g3C" id="ZfL-mz-YnG"/>
+                        <outlet property="uploadImageButton" destination="03v-Ss-Q32" id="ylL-64-B5D"/>
+                        <outlet property="viewPlayersButton" destination="DdX-Nz-mXf" id="N2d-Fw-BA3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sh4-Fn-6KK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="87.228260869565219"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c6o-I9-nJT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Xo-WS-3Eg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sc7-42-rbb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jkp-s5-42Q" kind="relationship" relationship="rootViewController" id="umA-lS-uYh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSx-t2-uuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="89.505247376311857"/>
+        </scene>
+        <!--参与人员列表-->
+        <scene sceneID="n6b-9Q-YTi">
+            <objects>
+                <tableViewController id="mvL-GY-9vE" customClass="CreatePlayerTableViewController" customModule="MyFrisbeeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="28" sectionFooterHeight="28" id="OEl-sG-T14">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.20770962800000001" blue="0.14694621699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CreatePlayerTableViewCell" rowHeight="89" id="jtN-KN-STP" customClass="CreatePlayerTableViewCell" customModule="MyFrisbeeApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="89"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jtN-KN-STP" id="kse-o0-Wn6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="88.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vIV-yz-MaX">
+                                            <rect key="frame" x="20" y="3" width="83" height="83"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="vIV-yz-MaX" secondAttribute="height" multiplier="1:1" id="mis-cf-j3L"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErD-8g-TWO">
+                                            <rect key="frame" x="237" y="27.333333333333329" width="99" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SA1-4b-44S">
+                                            <rect key="frame" x="143" y="28" width="74" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vIV-yz-MaX" firstAttribute="top" secondItem="kse-o0-Wn6" secondAttribute="top" constant="3" id="4Ra-fl-1a2"/>
+                                        <constraint firstItem="SA1-4b-44S" firstAttribute="centerY" secondItem="kse-o0-Wn6" secondAttribute="centerY" id="FWv-6F-Ku2"/>
+                                        <constraint firstItem="ErD-8g-TWO" firstAttribute="leading" secondItem="SA1-4b-44S" secondAttribute="trailing" constant="20" id="HDl-7x-CV5"/>
+                                        <constraint firstItem="vIV-yz-MaX" firstAttribute="leading" secondItem="kse-o0-Wn6" secondAttribute="leading" constant="20" id="OaP-Ww-x6o"/>
+                                        <constraint firstItem="SA1-4b-44S" firstAttribute="leading" secondItem="vIV-yz-MaX" secondAttribute="trailing" constant="40" id="UF6-dl-cuH"/>
+                                        <constraint firstItem="ErD-8g-TWO" firstAttribute="centerY" secondItem="kse-o0-Wn6" secondAttribute="centerY" id="tb9-us-wmY"/>
+                                        <constraint firstAttribute="bottom" secondItem="vIV-yz-MaX" secondAttribute="bottom" constant="3" id="wRB-7e-KK2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="playerAvatarImageView" destination="vIV-yz-MaX" id="7G3-CE-8Si"/>
+                                    <outlet property="playerNameLabel" destination="SA1-4b-44S" id="NHP-6U-GfW"/>
+                                    <outlet property="playerTitleLabel" destination="ErD-8g-TWO" id="zHC-Y7-W4L"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mvL-GY-9vE" id="HPr-K2-Od5"/>
+                            <outlet property="delegate" destination="mvL-GY-9vE" id="tFz-nS-lWD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="参与人员列表" id="1uY-0F-AKp">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;返回" id="Zah-NM-zXS">
+                            <connections>
+                                <action selector="returnButtonTapped:" destination="mvL-GY-9vE" id="QgT-mE-SdA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="报名" id="idS-fX-AzM"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ccK-7d-hSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3355" y="89"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="634-qW-qa4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0c0-P3-q8n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oLP-Da-C0H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mvL-GY-9vE" kind="relationship" relationship="rootViewController" id="XBu-EP-rX2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdw-Em-g9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2099" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="uploading Image" width="83" height="83"/>
+    </resources>
+</document>
