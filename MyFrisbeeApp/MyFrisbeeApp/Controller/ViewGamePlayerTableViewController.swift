@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import AlamofireImage
+import AlamofireImage
 
 class ViewGamePlayerTableViewController: UITableViewController {
 
@@ -22,7 +22,7 @@ class ViewGamePlayerTableViewController: UITableViewController {
         
         print(PickupTableViewController.games[PickupTableViewController.indexPath].key ?? "I have nothing to print out")
         FirebaseHelper.createGame(reference: PickupTableViewController.games[PickupTableViewController.indexPath].key!,gameTitle: PickupTableViewController.games[PickupTableViewController.indexPath].gameTitle, gameTime: PickupTableViewController.games[PickupTableViewController.indexPath].gameTime, gameLocation: PickupTableViewController.games[PickupTableViewController.indexPath].gameLocation, gameURL: PickupTableViewController.games[PickupTableViewController.indexPath].imageURL, gameHeight: 0, gameDescription: PickupTableViewController.games[PickupTableViewController.indexPath].gameDescription, gamePlayer: PickupTableViewController.games[PickupTableViewController.indexPath].gamePlayer)
-        
+        tableView.reloadData()
        // CreateAGameViewController.userid.append(Usvarcurrenvarid)
     
     
@@ -81,6 +81,8 @@ class ViewGamePlayerTableViewController: UITableViewController {
                     cell.playerPositionLabel.text = "Cutter"
                 }
                 
+                cell.playerAvatarUIImageView.af_setImage(withURL: URL(string: UserInfos.userAvatarURL)!)
+
              
                 
             })
