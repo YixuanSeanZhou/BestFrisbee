@@ -207,6 +207,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="zs6-gK-D2V" id="fSC-pU-GTu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7E-Z8-L4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

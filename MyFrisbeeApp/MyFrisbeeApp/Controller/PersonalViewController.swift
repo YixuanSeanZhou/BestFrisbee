@@ -10,14 +10,14 @@ import UIKit
 import FirebaseStorage
 import FirebaseDatabase
 
-class MyselfViewController: UIViewController {
+class MyselfViewController: UIViewController, UITextViewDelegate {
     
     //Access of MGPhotoHelper
     let photoHelper = MGPhotoHelper()
     
     var userGender: Int = 0
     var userPosition: Int = 0
-    var url: String = ""
+    var url: String = " "
     @IBOutlet weak var avaterImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -103,7 +103,7 @@ class MyselfViewController: UIViewController {
             self.avaterImage.af_setImage(withURL: URL(string: userinfo.userAvatarURL)!)
             self.genderSegementedControl.selectedSegmentIndex = userinfo.userGender
             self.positionSementedControl.selectedSegmentIndex = userinfo.userPosition
-            
+            self.url = userinfo.userAvatarURL
            
         }
  
@@ -114,7 +114,9 @@ class MyselfViewController: UIViewController {
     
     
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
 

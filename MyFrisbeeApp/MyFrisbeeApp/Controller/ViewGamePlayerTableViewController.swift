@@ -11,11 +11,15 @@ import AlamofireImage
 
 class ViewGamePlayerTableViewController: UITableViewController {
 
+    @IBOutlet weak var addButton: UIBarButtonItem!
     
     
     var indexPath = 0
     
     @IBAction func addButtonTapped(_ sender: Any) {
+        
+        //addButton.title = "quit"
+        
         PickupTableViewController.games[PickupTableViewController.indexPath].gamePlayer.append(User.current.uid)
         print( PickupTableViewController.games[PickupTableViewController.indexPath].gamePlayer)
       ////////////
