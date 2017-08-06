@@ -16,6 +16,15 @@ class ViewgameController: UIViewController {
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
    
+    func disable(){
+        descriptionTextView.isUserInteractionEnabled=false
+        timeTextField.isUserInteractionEnabled=false
+        locationTextField.isUserInteractionEnabled=false
+        locationTextField.isUserInteractionEnabled=false
+        titleTextField.isUserInteractionEnabled=false
+    }
+    
+    
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(type: .contact)
         if let initialViewController = storyboard.instantiateInitialViewController() {
@@ -41,7 +50,7 @@ class ViewgameController: UIViewController {
         super.viewDidLoad()
         
         //Configuring the view
-        
+        disable()
         titleTextField.text = PickupTableViewController.games[PickupTableViewController.indexPath].gameTitle
         locationTextField.text = PickupTableViewController.games[PickupTableViewController.indexPath].gameLocation
          timeTextField.text = PickupTableViewController.games[PickupTableViewController.indexPath].gameTime

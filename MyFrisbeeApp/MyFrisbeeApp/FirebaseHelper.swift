@@ -36,6 +36,25 @@ struct FirebaseHelper {
         ref.updateChildValues(dict)
     }
     
+    
+    //Report
+    
+    static func uploadReport(report:String){
+        //sst dictionary
+        
+        
+        let dict = ["user": User.current.uid,
+                    "username:": User.current.username,
+                    "feedback": report] as [String : Any]
+        
+        let ref = Database.database().reference().child("report").childByAutoId()
+        //ste reference on database
+        
+        
+        ref.updateChildValues(dict)
+    }
+
+    
     static func createGame(reference: String, gameTitle: String, gameTime: String, gameLocation: String, gameURL : String, gameHeight: Float, gameDescription: String, gamePlayer: [String]){
         //sst dictionary
         

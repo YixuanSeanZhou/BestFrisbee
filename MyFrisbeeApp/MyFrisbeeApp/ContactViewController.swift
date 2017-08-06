@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 
-class ContactViewController: UIViewController{
+class ContactViewController: UIViewController, UITextViewDelegate{
     
     @IBAction func returnButtonTapped(_ sender: UIButton) {
+        
+        FirebaseHelper.uploadReport(report: reportTextView.text)
         
         let initialViewController = UIStoryboard.initialViewController(for: .main)
         self.view.window?.rootViewController = initialViewController
@@ -22,4 +24,12 @@ class ContactViewController: UIViewController{
     
     }
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    
+    @IBOutlet weak var reportTextView: UITextView!
 }

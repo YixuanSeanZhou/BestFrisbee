@@ -22,9 +22,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eUO-Fn-dhE">
-                                <rect key="frame" x="20" y="30" width="335" height="551"/>
+                                <rect key="frame" x="20" y="30" width="335" height="627"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="此页面功能正在开发中" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSR-lP-tMU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有些功能还在开发中" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSR-lP-tMU">
                                         <rect key="frame" x="67.5" y="0.0" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="ht3-AY-1vi"/>
@@ -50,41 +50,45 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThomasWechat" translatesAutoresizingMaskIntoConstraints="NO" id="fy8-BL-BAt">
-                                        <rect key="frame" x="17.5" y="125.5" width="300" height="300"/>
+                                        <rect key="frame" x="67.5" y="125.5" width="200" height="200"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="bEg-yq-T2J"/>
-                                            <constraint firstAttribute="width" constant="300" id="eh5-HK-epV"/>
+                                            <constraint firstAttribute="height" constant="200" id="bEg-yq-T2J"/>
+                                            <constraint firstAttribute="width" constant="200" id="eh5-HK-epV"/>
                                         </constraints>
                                     </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="您有什么意见，可以在这里写写，反正我们也不会看" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TRl-d8-G9P">
+                                        <rect key="frame" x="47.5" y="340.5" width="240" height="155.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="咖喱的邮箱：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rf7-lh-VkS">
-                                        <rect key="frame" x="92.5" y="440.5" width="150" height="30"/>
+                                        <rect key="frame" x="92.5" y="511" width="150" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="Anj-2Q-wmo"/>
-                                            <constraint firstAttribute="height" constant="30" id="ZGG-S9-SyM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wpp2333@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyX-lY-ZV6">
-                                        <rect key="frame" x="67.5" y="485.5" width="200" height="20.5"/>
+                                        <rect key="frame" x="67.5" y="546.5" width="200" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="bMc-a2-u5p"/>
-                                            <constraint firstAttribute="height" constant="20" id="jDS-tt-aas"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE1-w0-hX3">
-                                        <rect key="frame" x="92.5" y="521" width="150" height="30"/>
+                                        <rect key="frame" x="92.5" y="582" width="150" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.35997178819999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Cv4-zk-KrU"/>
+                                            <constraint firstAttribute="height" constant="45" id="alQ-WM-QaI"/>
                                             <constraint firstAttribute="width" constant="150" id="ohT-Tc-Plz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
-                                        <state key="normal" title="返回">
+                                        <state key="normal" title="上传并返回">
                                             <color key="titleColor" red="0.0" green="0.23456488719999999" blue="0.23258463539999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="1" green="1" blue="0.35997178819999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -93,6 +97,11 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="TRl-d8-G9P" firstAttribute="leading" secondItem="eUO-Fn-dhE" secondAttribute="leading" constant="47.5" id="LRp-rQ-0kC"/>
+                                    <constraint firstItem="Rf7-lh-VkS" firstAttribute="top" secondItem="TRl-d8-G9P" secondAttribute="bottom" constant="15" id="t6n-DW-IhX"/>
+                                    <constraint firstAttribute="trailing" secondItem="TRl-d8-G9P" secondAttribute="trailing" constant="47.5" id="yLg-6X-IfK"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,12 +109,16 @@
                             <constraint firstItem="eUO-Fn-dhE" firstAttribute="top" secondItem="2xT-6D-YA7" secondAttribute="bottom" constant="10" id="DUq-58-5qv"/>
                             <constraint firstAttribute="trailing" secondItem="eUO-Fn-dhE" secondAttribute="trailing" constant="20" id="Fmc-ZA-qgN"/>
                             <constraint firstItem="eUO-Fn-dhE" firstAttribute="leading" secondItem="mbf-Ix-1s5" secondAttribute="leading" constant="20" id="JpN-z2-QWn"/>
+                            <constraint firstItem="p4i-WX-o01" firstAttribute="top" secondItem="eUO-Fn-dhE" secondAttribute="bottom" constant="10" id="lVE-eY-wmX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="reportTextView" destination="TRl-d8-G9P" id="c3a-fh-mKc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AzB-eS-9O0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="128.18590704647679"/>
+            <point key="canvasLocation" x="-649" y="119"/>
         </scene>
     </scenes>
     <resources>

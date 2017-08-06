@@ -100,6 +100,7 @@ class MyselfViewController: UIViewController, UITextViewDelegate {
             self.nameTextField.text = userinfo.userName
             self.teamTextField.text = userinfo.userTeam
             self.heightTextField.text = userinfo.userHeight
+            self.weightTextField.text = userinfo.userweight
             self.avaterImage.af_setImage(withURL: URL(string: userinfo.userAvatarURL)!)
             self.genderSegementedControl.selectedSegmentIndex = userinfo.userGender
             self.positionSementedControl.selectedSegmentIndex = userinfo.userPosition
@@ -151,20 +152,22 @@ class MyselfViewController: UIViewController, UITextViewDelegate {
             print("handle image")
             let storageRef = StorageReference.newPostImageReference()
             StorageService.uploadImage(image, at: storageRef, completion: { (downloadURL) in
-                guard let downloadURL = downloadURL else {
+                guard let downloadURL = downloadURL
+                    else {
                     return
                 }
                 //self.gameImageImageView.image = image
                 print(downloadURL.absoluteString)
                 self.url = downloadURL.absoluteString
                 FirebaseHelper.editUserInfo(userName: self.nameTextField.text!, userTeam: self.teamTextField.text!, userGender: self.userGender,  userPosition : self.userPosition, userHeight: self.heightTextField.text!, userWeight: self.weightTextField.text!, userAvatarURL: self.url, userAvatarHeight: 2.33)
+                 self.navigation_apper()
             })
             
             self.avaterImage.image = image
         }
         print(self.url)
         photoHelper.presentActionSheet(from: self)
-        navigation_apper()
+       
         FirebaseHelper.editUserInfo(userName: nameTextField.text!, userTeam: teamTextField.text!, userGender: userGender,  userPosition : userPosition, userHeight: heightTextField.text!, userWeight: weightTextField.text!, userAvatarURL: self.url, userAvatarHeight: 2.33)
         
     }

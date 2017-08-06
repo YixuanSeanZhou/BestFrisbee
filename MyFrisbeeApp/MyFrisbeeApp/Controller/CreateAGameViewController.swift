@@ -10,7 +10,7 @@ import UIKit
 import FirebaseStorage
 import FirebaseDatabase
 
-class CreateAGameViewController: UIViewController {
+class CreateAGameViewController: UIViewController, UITextViewDelegate {
 
     // MARK: - Properties
     
@@ -29,7 +29,9 @@ class CreateAGameViewController: UIViewController {
         print ("apper")
     }
 
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +96,7 @@ class CreateAGameViewController: UIViewController {
                 print("MTFKER")
                 print(downloadURL ?? "MTFKER")
 //                self.navigation_apper()
-                self.navigation_apper()
+                
                 guard let downloadURL = downloadURL
                     
                 else {
@@ -103,6 +105,7 @@ class CreateAGameViewController: UIViewController {
                 //self.gameImageImageView.image = image
                 print(downloadURL.absoluteString)
                 self.url = downloadURL.absoluteString
+                self.navigation_apper()
                 //self.navigation_apper()
                 print(self.url)
             })

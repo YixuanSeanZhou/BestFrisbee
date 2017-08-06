@@ -11,7 +11,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class CreateUsernameViewController: UIViewController {
+class CreateUsernameViewController: UIViewController, UITextViewDelegate {
     
     
     @IBOutlet weak var usernameTextField: UITextField!
@@ -27,7 +27,9 @@ class CreateUsernameViewController: UIViewController {
     
     
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
     
